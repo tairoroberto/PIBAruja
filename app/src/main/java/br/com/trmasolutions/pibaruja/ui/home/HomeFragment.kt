@@ -11,7 +11,11 @@ import br.com.trmasolutions.pibaruja.R
 class HomeFragment : Fragment() {
 
     companion object {
-        fun newInstance() = HomeFragment()
+        fun newInstance(titleTab: String): HomeFragment {
+            val fragment = HomeFragment()
+            fragment.arguments?.putString("title", titleTab)
+            return fragment
+        }
     }
 
     private lateinit var viewModel: HomeViewModel
@@ -24,7 +28,6 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
+    }
 }

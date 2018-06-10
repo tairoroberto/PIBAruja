@@ -1,39 +1,39 @@
 {
   "project_info": {
-    "project_number": "529274207152",
-    "firebase_url": "https://pibaruja-efe2a.firebaseio.com",
-    "project_id": "pibaruja-efe2a",
-    "storage_bucket": "pibaruja-efe2a.appspot.com"
+    "project_number": "1003958814326",
+    "firebase_url": "https://pibaruja-39957.firebaseio.com",
+    "project_id": "pibaruja-39957",
+    "storage_bucket": "pibaruja-39957.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:529274207152:android:8034c2111023b10f",
+        "mobilesdk_app_id": "1:1003958814326:android:564b62a7536edd18",
         "android_client_info": {
-          "package_name": "br.com.trmasolutions.ecpcaruja"
+          "package_name": "br.com.trmasolutions.pibaruja"
         }
       },
       "oauth_client": [
         {
-          "client_id": "529274207152-fd5kib4e9jq33tnv6k3ch5ng26e02c5f.apps.googleusercontent.com",
+          "client_id": "1003958814326-b1jjdiqcpd54gcd1q2c9m8610o3njtg3.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "br.com.trmasolutions.ecpcaruja",
+            "package_name": "br.com.trmasolutions.pibaruja",
             "certificate_hash": "abb50b3dabc2b1e6b9790493185acd6af72ca2ba"
           }
         },
         {
-          "client_id": "529274207152-ksqopm54p028r6hep3a788hcqaj7srmm.apps.googleusercontent.com",
+          "client_id": "1003958814326-1a0cfnsusipj7ampovsvibojmtpnqu9v.apps.googleusercontent.com",
           "client_type": 3
         },
         {
-          "client_id": "529274207152-ksqopm54p028r6hep3a788hcqaj7srmm.apps.googleusercontent.com",
+          "client_id": "1003958814326-1a0cfnsusipj7ampovsvibojmtpnqu9v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD9OD8PIg5VZQSPPAvQ5gPdOOu686DsoQc"
+          "current_key": "AIzaSyBd94l6p_QnN9W9OUVvzjx-kZBER8TqVns"
         }
       ],
       "services": {
@@ -44,7 +44,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "529274207152-ksqopm54p028r6hep3a788hcqaj7srmm.apps.googleusercontent.com",
+              "client_id": "1003958814326-1a0cfnsusipj7ampovsvibojmtpnqu9v.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

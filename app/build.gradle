@@ -65,13 +65,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     /*###################### Android support  libs ###############################*/
-    implementation("com.android.support:appcompat-v7:${rootProject.supportLibs}") {
-        exclude group: 'com.android.support', module: 'support-v4'
-    }
+    implementation("com.android.support:appcompat-v7:${rootProject.supportLibs}")
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout"
-    implementation("com.android.support:design:${rootProject.supportLibs}") {
-        exclude module: 'animated-vector-drawable'
-    }
+    implementation("com.android.support:design:${rootProject.supportLibs}")
     implementation "com.android.support:multidex:${rootProject.multidex}"
     implementation "com.google.android.instantapps:instantapps:1.1.0"
     /*############################################################################*/
@@ -173,3 +169,4 @@ dependencies {
     androidTestImplementation "com.android.support.test.uiautomator:uiautomator-v18:${rootProject.uiautomator}"
     /*############################################################################*/
 }
+apply plugin: 'com.google.gms.google-services'

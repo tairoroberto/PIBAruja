@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">ECPC Arujá</string>
+    <string name="app_name">PIB Arujá</string>
+    <string name="splash_pib_text_first">Primeira igreja \nbatista em</string>
+    <string name="splash_aruja">Arujá</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Eventos</string>
+    <string name="tab_text_2">ECPC</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

@@ -3,34 +3,48 @@
     package="br.com.trmasolutions.pibaruja">
 
     <application
-        android:name="br.com.trmasolutions.pibaruja.CustomApplication"
+        android:name=".CustomApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="br.com.trmasolutions.pibaruja.ui.splash.SplashActivity"
+        <activity
+            android:name=".ui.splash.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
-                <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="br.com.trmasolutions.pibaruja.ui.home.HomeActivity"/>
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
-        <service android:name="br.com.trmasolutions.pibaruja.domain.services.CustomFirebaseInstaceIdService">
+        <service android:name=".domain.services.CustomFirebaseInstaceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="br.com.trmasolutions.pibaruja.domain.services.CustomFirebaseMessagingService">
+        <service android:name=".domain.services.CustomFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="br.com.trmasolutions.pibaruja.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
@@ -38,7 +52,6 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
-
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="64f062bc6b62cea865d47208c0e9d4b4e4f79251" />
