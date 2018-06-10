@@ -7,4 +7,6 @@
     <string name="tab_text_2">ECPC</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="action_admin">Administrador</string>
+    <string name="title_activity_admin">PiB Arujá Administração</string>
 </resources>

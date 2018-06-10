@@ -45,7 +45,6 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/ic_launcher" />
@@ -55,6 +54,11 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="64f062bc6b62cea865d47208c0e9d4b4e4f79251" />
+
+        <activity
+            android:name=".ui.admin.AdminActivity"
+            android:label="@string/title_activity_admin"
+            android:parentActivityName=".ui.home.HomeActivity"/>
     </application>
 
 </manifest>
