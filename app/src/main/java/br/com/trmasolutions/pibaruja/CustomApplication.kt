@@ -1,4 +1,4 @@
-package br.com.trmasolutions.ecpcaruja
+package br.com.trmasolutions.pibaruja
 
 import android.app.Application
 import android.content.Context

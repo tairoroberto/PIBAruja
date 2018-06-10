@@ -1,4 +1,4 @@
-package br.com.trmasolutions.ecpcaruja
+package br.com.trmasolutions.pibaruja
 
 import org.junit.Test
 

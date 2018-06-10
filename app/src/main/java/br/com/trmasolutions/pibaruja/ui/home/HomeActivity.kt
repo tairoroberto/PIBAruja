@@ -1,8 +1,8 @@
-package br.com.trmasolutions.ecpcaruja.ui.home
+package br.com.trmasolutions.pibaruja.ui.home
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import br.com.trmasolutions.ecpcaruja.R
+import br.com.trmasolutions.pibaruja.R
 
 class HomeActivity : AppCompatActivity() {
 

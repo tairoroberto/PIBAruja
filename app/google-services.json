@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "166528944427",
-    "firebase_url": "https://ecpcaruja-53259.firebaseio.com",
-    "project_id": "ecpcaruja-53259",
-    "storage_bucket": "ecpcaruja-53259.appspot.com"
+    "project_number": "529274207152",
+    "firebase_url": "https://pibaruja-efe2a.firebaseio.com",
+    "project_id": "pibaruja-efe2a",
+    "storage_bucket": "pibaruja-efe2a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:166528944427:android:8034c2111023b10f",
+        "mobilesdk_app_id": "1:529274207152:android:8034c2111023b10f",
         "android_client_info": {
           "package_name": "br.com.trmasolutions.ecpcaruja"
         }
       },
       "oauth_client": [
         {
-          "client_id": "166528944427-47jnp9fb80qofoej7e3d3o4cvj94t1q3.apps.googleusercontent.com",
+          "client_id": "529274207152-fd5kib4e9jq33tnv6k3ch5ng26e02c5f.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "br.com.trmasolutions.ecpcaruja",
@@ -23,17 +23,17 @@
           }
         },
         {
-          "client_id": "166528944427-jv5oh0m8bdggn34faqcva1dfb1kkpg5r.apps.googleusercontent.com",
+          "client_id": "529274207152-ksqopm54p028r6hep3a788hcqaj7srmm.apps.googleusercontent.com",
           "client_type": 3
         },
         {
-          "client_id": "166528944427-jv5oh0m8bdggn34faqcva1dfb1kkpg5r.apps.googleusercontent.com",
+          "client_id": "529274207152-ksqopm54p028r6hep3a788hcqaj7srmm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDRyinJ9CH_UcszJLlyzsH6YBLX4BT2ZqM"
+          "current_key": "AIzaSyD9OD8PIg5VZQSPPAvQ5gPdOOu686DsoQc"
         }
       ],
       "services": {
@@ -44,7 +44,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "166528944427-jv5oh0m8bdggn34faqcva1dfb1kkpg5r.apps.googleusercontent.com",
+              "client_id": "529274207152-ksqopm54p028r6hep3a788hcqaj7srmm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

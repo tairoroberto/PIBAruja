@@ -1,4 +1,4 @@
-package br.com.trmasolutions.ecpcaruja.ui.home
+package br.com.trmasolutions.pibaruja.ui.home
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.trmasolutions.ecpcaruja.R
+import br.com.trmasolutions.pibaruja.R
 
 class HomeFragment : Fragment() {
 

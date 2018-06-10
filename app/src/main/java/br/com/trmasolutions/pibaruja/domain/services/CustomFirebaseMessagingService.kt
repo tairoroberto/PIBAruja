@@ -1,4 +1,4 @@
-package br.com.trmasolutions.ecpcaruja.domain.services
+package br.com.trmasolutions.pibaruja.domain.services
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -10,8 +10,8 @@ import android.os.Build
 import android.support.v4.app.NotificationCompat
 import android.support.v4.app.TaskStackBuilder
 import android.support.v4.content.ContextCompat
-import br.com.trmasolutions.ecpcaruja.R
-import br.com.trmasolutions.ecpcaruja.ui.splash.SplashActivity
+import br.com.trmasolutions.pibaruja.R
+import br.com.trmasolutions.pibaruja.ui.splash.SplashActivity
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 

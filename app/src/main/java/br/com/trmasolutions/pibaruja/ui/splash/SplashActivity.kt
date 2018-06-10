@@ -1,16 +1,16 @@
-package br.com.trmasolutions.ecpcaruja.ui.splash
+package br.com.trmasolutions.pibaruja.ui.splash
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import br.com.trmasolutions.ecpcaruja.BuildConfig
-import br.com.trmasolutions.ecpcaruja.R
+import br.com.trmasolutions.pibaruja.BuildConfig
+import br.com.trmasolutions.pibaruja.R
 import com.crashlytics.android.Crashlytics
 import com.crashlytics.android.core.CrashlyticsCore
 import com.google.android.instantapps.InstantApps
 import com.google.firebase.messaging.FirebaseMessaging
 import io.fabric.sdk.android.Fabric
-import br.com.trmasolutions.ecpcaruja.ui.home.HomeActivity
+import br.com.trmasolutions.pibaruja.ui.home.HomeActivity
 import java.util.*
 
 class SplashActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package br.com.trmasolutions.ecpcaruja.ui.home
+package br.com.trmasolutions.pibaruja.ui.home
 
 import android.arch.lifecycle.ViewModel
 
