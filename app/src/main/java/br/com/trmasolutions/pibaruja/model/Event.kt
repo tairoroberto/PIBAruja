@@ -1,7 +1,7 @@
 package br.com.trmasolutions.pibaruja.model
 
-import android.arch.persistence.room.Entity
 import android.arch.persistence.room.ColumnInfo
+import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -9,35 +9,46 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 @Entity(tableName = "events")
-class Event(
+data class Event(
 
-        @SerializedName("id")
         @PrimaryKey
         @ColumnInfo(name = "id")
-        var id:String,
+        @SerializedName("uid")
+        val uid: String = "",
 
-        @SerializedName("title")
-        @ColumnInfo(name = "title")
-        var title:String,
-
-        @SerializedName("description")
-        @ColumnInfo(name = "description")
-        var description:String,
-
-        @SerializedName("date")
         @ColumnInfo(name = "date")
-        var date:String,
+        @SerializedName("date")
+        val date: String = "",
 
-        @SerializedName("image")
         @ColumnInfo(name = "image")
-        var image:String,
+        @SerializedName("image")
+        val image: String = "",
 
-        @SerializedName("local")
-        @ColumnInfo(name = "local")
-        var local:String,
-
-        @SerializedName("sponsor")
         @ColumnInfo(name = "sponsor")
-        var sponsor:String
+        @SerializedName("sponsor")
+        val sponsor: String = "",
 
-) : Parcelable
+
+        @ColumnInfo(name = "contact")
+        @SerializedName("contact")
+        val contact: String = "",
+
+        @ColumnInfo(name = "name")
+        @SerializedName("name")
+        val name: String = "",
+
+        @ColumnInfo(name = "created_at")
+        @SerializedName("created_at")
+        val createdAt: String = "",
+
+        @ColumnInfo(name = "description")
+        @SerializedName("description")
+        val description: String = "",
+
+        @ColumnInfo(name = "video")
+        @SerializedName("video")
+        val video: String = "",
+
+        @ColumnInfo(name = "local")
+        @SerializedName("local")
+        val local: String = "") : Parcelable
