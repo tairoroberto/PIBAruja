@@ -1,5 +1,6 @@
 package br.com.trmasolutions.pibaruja.ui.home
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -29,5 +30,14 @@ class HomeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
 
+        viewModel.getEvents()
+
+        viewModel.getEventResponse().observe(this, Observer {
+
+        })
+
+        viewModel.getLoadingStatus().observe(this, Observer {
+
+        })
     }
 }
