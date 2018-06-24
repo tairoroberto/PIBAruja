@@ -11,51 +11,51 @@ interface ApiService {
     fun getEvents(): Single<EventsResponse>
 
     @POST("event/")
-    fun setEvent(event: Event): Single<DefaultResponse>
+    fun setEvent(@Body event: Event): Single<DefaultResponse>
 
     @PUT("event/")
-    fun updateEvent(event: Event): Single<DefaultResponse>
+    fun updateEvent(@Body event: Event): Single<DefaultResponse>
 
     @DELETE("event/")
-    fun deleteEvent(event: Event): Single<DefaultResponse>
+    fun deleteEvent(@Body event: Event): Single<DefaultResponse>
 
     /*########## USERS ##########*/
     @GET("user/")
     fun getUsers(): Single<UsersResponse>
 
     @POST("user/")
-    fun setUser(user: User): Single<DefaultResponse>
+    fun setUser(@Body user: User): Single<DefaultResponse>
 
     @PUT("user/")
-    fun updateUser(user: User): Single<DefaultResponse>
+    fun updateUser(@Body user: User): Single<DefaultResponse>
 
     @DELETE("user/")
-    fun deleteUser(user: User): Single<DefaultResponse>
+    fun deleteUser(@Body user: User): Single<DefaultResponse>
 
     /*########## ECPC DATES ##########*/
     @GET("ecpc/date")
     fun getEcpcDates(): Single<EcpcDatesResponse>
 
     @POST("ecpc/date")
-    fun setEcpcDate(ecpcDate: EcpcDate): Single<DefaultResponse>
+    fun setEcpcDate(@Body ecpcDate: EcpcDate): Single<DefaultResponse>
 
     @PUT("ecpc/date")
-    fun updateEcpcDate(ecpcDate: EcpcDate): Single<DefaultResponse>
+    fun updateEcpcDate(@Body ecpcDate: EcpcDate): Single<DefaultResponse>
 
     @DELETE("ecpc/date")
-    fun deleteEcpcDate(ecpcDate: EcpcDate): Single<DefaultResponse>
+    fun deleteEcpcDate(@Body ecpcDate: EcpcDate): Single<DefaultResponse>
 
     /*########## ECPC MARRIAGE COUPLES ##########*/
     @GET("ecpc/married_couple")
     fun getEcpcMarriedCouples(@Query("ecpc_date_uid") ecpcDateUid: String): Single<EcpcMarriedCoupleResponse>
 
     @POST("ecpc/married_couple")
-    fun setEcpcMarriedCouple(user: User): Single<DefaultResponse>
+    fun setEcpcMarriedCouple(@Body ecpcMarriedCouple: EcpcMarriedCouple): Single<DefaultResponse>
 
     @PUT("ecpc/married_couple")
-    fun updateEcpcMarriedCouple(user: User): Single<DefaultResponse>
+    fun updateEcpcMarriedCouple(@Body ecpcMarriedCouple: EcpcMarriedCouple): Single<DefaultResponse>
 
     @DELETE("ecpc/married_couple")
-    fun deleteEcpcMarriedCouple(user: User): Single<DefaultResponse>
+    fun deleteEcpcMarriedCouple(@Body ecpcMarriedCouple: EcpcMarriedCouple): Single<DefaultResponse>
 
 }

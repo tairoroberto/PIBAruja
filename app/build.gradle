@@ -79,6 +79,7 @@ dependencies {
     /*###################### Android support  libs ###############################*/
     implementation "com.android.support:appcompat-v7:${rootProject.supportLibs}"
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout"
+    implementation "com.android.support:cardview-v7:${rootProject.supportLibs}"
     implementation "com.android.support:design:${rootProject.supportLibs}"
     implementation "com.android.support:multidex:${rootProject.multidex}"
     implementation 'com.google.android.instantapps:instantapps:1.1.0'

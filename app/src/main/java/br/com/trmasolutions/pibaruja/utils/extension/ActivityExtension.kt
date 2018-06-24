@@ -6,13 +6,12 @@ import android.app.Activity
 import android.content.Context
 import android.net.ConnectivityManager
 import android.support.design.widget.Snackbar
+import android.support.design.widget.TextInputEditText
 import android.support.v4.content.ContextCompat
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
-import org.jetbrains.anko.alert
 import org.jetbrains.anko.browse
-import org.jetbrains.anko.yesButton
 
 
 /**
@@ -74,13 +73,13 @@ fun Activity.launchPlayStore() {
     browse("https://play.google.com/store/apps/details?id=com.remotejobs.io.app")
 }
 
-fun Activity.showValidationAlert(msg: String, view: View?) {
-    alert {
-        this.title = "Atenção"
-        this.message = "$msg é requerido"
-        yesButton { dialog ->
-            dialog.dismiss()
-            view?.requestFocus()
-        }
-    }.show()
+fun TextInputEditText.validateEmpty(msg: String): Boolean {
+    if (text?.isEmpty() == true) {
+        requestFocus()
+        parent?.requestChildFocus(this, this)
+        error = "$msg é requerido"
+        return true
+    }
+
+    return false
 }
