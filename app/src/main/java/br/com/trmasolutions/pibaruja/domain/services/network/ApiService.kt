@@ -1,27 +1,61 @@
 package br.com.trmasolutions.pibaruja.domain.services.network
 
-import com.remotejobs.io.app.model.CompaniesResponse
-import com.remotejobs.io.app.model.HighestPaidRespose
-import com.remotejobs.io.app.model.JobsResponse
-import com.remotejobs.io.app.model.StatisticsResponse
+import br.com.trmasolutions.pibaruja.model.*
 import io.reactivex.Single
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiService {
 
-    @GET("getJobs/")
-    fun search(@Query("path") path: String): Single<JobsResponse>
+    /*########## EVENTS ##########*/
+    @GET("event/")
+    fun getEvents(): Single<EventsResponse>
 
-    @GET("getCompanies/")
-    fun getCompanies(): Single<CompaniesResponse>
+    @POST("event/")
+    fun setEvent(event: Event): Single<DefaultResponse>
 
-    @GET("getCompanyJobs")
-    fun getCompanyJobs(@Query("company") company: String): Single<JobsResponse>
+    @PUT("event/")
+    fun updateEvent(event: Event): Single<DefaultResponse>
 
-    @GET("highestPaid/")
-    fun getHighestPaid(): Single<HighestPaidRespose>
+    @DELETE("event/")
+    fun deleteEvent(event: Event): Single<DefaultResponse>
 
-    @GET("getStatistics/")
-    fun getStatistics(): Single<StatisticsResponse>
+    /*########## USERS ##########*/
+    @GET("user/")
+    fun getUsers(): Single<UsersResponse>
+
+    @POST("user/")
+    fun setUser(user: User): Single<DefaultResponse>
+
+    @PUT("user/")
+    fun updateUser(user: User): Single<DefaultResponse>
+
+    @DELETE("user/")
+    fun deleteUser(user: User): Single<DefaultResponse>
+
+    /*########## ECPC DATES ##########*/
+    @GET("ecpc/date")
+    fun getEcpcDates(): Single<EcpcDatesResponse>
+
+    @POST("ecpc/date")
+    fun setEcpcDate(ecpcDate: EcpcDate): Single<DefaultResponse>
+
+    @PUT("ecpc/date")
+    fun updateEcpcDate(ecpcDate: EcpcDate): Single<DefaultResponse>
+
+    @DELETE("ecpc/date")
+    fun deleteEcpcDate(ecpcDate: EcpcDate): Single<DefaultResponse>
+
+    /*########## ECPC MARRIAGE COUPLES ##########*/
+    @GET("ecpc/married_couple")
+    fun getEcpcMarriedCouples(@Query("ecpc_date_uid") ecpcDateUid: String): Single<EcpcMarriedCoupleResponse>
+
+    @POST("ecpc/married_couple")
+    fun setEcpcMarriedCouple(user: User): Single<DefaultResponse>
+
+    @PUT("ecpc/married_couple")
+    fun updateEcpcMarriedCouple(user: User): Single<DefaultResponse>
+
+    @DELETE("ecpc/married_couple")
+    fun deleteEcpcMarriedCouple(user: User): Single<DefaultResponse>
+
 }

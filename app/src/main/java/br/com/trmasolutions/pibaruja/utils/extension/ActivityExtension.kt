@@ -10,7 +10,9 @@ import android.support.v4.content.ContextCompat
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
+import org.jetbrains.anko.alert
 import org.jetbrains.anko.browse
+import org.jetbrains.anko.yesButton
 
 
 /**
@@ -68,28 +70,17 @@ fun Activity.showSoftKeyboard() {
     }
 }
 
-fun Context.removeUnicodeCharacters(data: String): String {
-
-    return data
-            .replace("\\u00E2\\u0080\\u0099", "'")
-            .replace("\\u00e2\\u0080\\u0099", "'")
-            .replace("\\u00E2\\u0080\\u009C", "'")
-            .replace("\\u00e2\\u0080\\u009c", "'")
-            .replace("\\u00E2\\u0080\\u009D", "'")
-            .replace("\\u00e2\\u0080\\u009d", "'")
-            .replace("\\u00E2\\u0080\\u0093", "'")
-            .replace("\\u00e2\\u0080\\u0093", "'")
-            .replace("\\u00E2\\u0082\\u00AC", "€")
-            .replace("\\u00e2\\u0082\\u00aC", "€")
-            .replace("\\u00c3\\u00a9", "é")
-            .replace("\\u00C3\\u00A9", "é")
-            .replace("\\u00C3\\u00A0", "à")
-            .replace("\\u00c3\\u00a0", "à")
-            .replace("&#x2019;", "'")
-            .replace("&#xA0;", " ")
-            .replace("&amp;", "&")
-}
-
 fun Activity.launchPlayStore() {
     browse("https://play.google.com/store/apps/details?id=com.remotejobs.io.app")
+}
+
+fun Activity.showValidationAlert(msg: String, view: View?) {
+    alert {
+        this.title = "Atenção"
+        this.message = "$msg é requerido"
+        yesButton { dialog ->
+            dialog.dismiss()
+            view?.requestFocus()
+        }
+    }.show()
 }

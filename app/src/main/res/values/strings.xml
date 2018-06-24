@@ -9,4 +9,5 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="action_admin">Administrador</string>
     <string name="title_activity_admin">PiB Arujá Administração</string>
+    <string name="YOUTUBE_KEY">AIzaSyBup7pAOXeUSSg4ucjHIHETX_Z8mekRohI</string>
 </resources>

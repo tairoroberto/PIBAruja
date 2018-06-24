@@ -14,41 +14,40 @@ data class Event(
         @PrimaryKey
         @ColumnInfo(name = "id")
         @SerializedName("uid")
-        val uid: String = "",
-
-        @ColumnInfo(name = "date")
-        @SerializedName("date")
-        val date: String = "",
-
-        @ColumnInfo(name = "image")
-        @SerializedName("image")
-        val image: String = "",
-
-        @ColumnInfo(name = "sponsor")
-        @SerializedName("sponsor")
-        val sponsor: String = "",
-
-
-        @ColumnInfo(name = "contact")
-        @SerializedName("contact")
-        val contact: String = "",
+        var uid: String = "",
 
         @ColumnInfo(name = "name")
         @SerializedName("name")
-        val name: String = "",
-
-        @ColumnInfo(name = "created_at")
-        @SerializedName("created_at")
-        val createdAt: String = "",
+        var name: String = "",
 
         @ColumnInfo(name = "description")
         @SerializedName("description")
-        val description: String = "",
+        var description: String = "",
+
+        @ColumnInfo(name = "date")
+        @SerializedName("date")
+        var date: String = "",
+
+        @ColumnInfo(name = "image")
+        @SerializedName("image")
+        var image: String = "",
 
         @ColumnInfo(name = "video")
         @SerializedName("video")
-        val video: String = "",
+        var video: String = "",
 
         @ColumnInfo(name = "local")
         @SerializedName("local")
-        val local: String = "") : Parcelable
+        var local: String = "",
+
+        @ColumnInfo(name = "sponsor")
+        @SerializedName("sponsor")
+        var sponsor: String = "",
+
+        @ColumnInfo(name = "contact")
+        @SerializedName("contact")
+        var contact: String = "",
+
+        @ColumnInfo(name = "created_at")
+        @SerializedName("created_at")
+        var createdAt: String = "") : Parcelable
