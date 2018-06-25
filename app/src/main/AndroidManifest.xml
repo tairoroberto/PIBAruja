@@ -36,7 +36,10 @@
 
         <activity
             android:name=".ui.event.EventActivity"
-            android:label="@string/title_activity_event"/>
+            android:label="@string/title_activity_event" />
+
+        <activity android:name=".ui.home.DetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <service android:name=".domain.services.CustomFirebaseInstaceIdService">
             <intent-filter>

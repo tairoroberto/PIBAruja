@@ -13,7 +13,7 @@ interface EventosDao {
     fun add(event: Event): Long
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addAll(jobs: List<Event>?)
+    fun addAll(events: List<Event>?)
 
     @Update
     fun update(event: Event)

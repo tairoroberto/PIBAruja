@@ -10,6 +10,7 @@ import br.com.trmasolutions.pibaruja.model.EventsResponse
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import org.jetbrains.anko.doAsync
 
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -40,6 +41,10 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
                 .subscribe(
                         { response ->
                             eventResponse.value = response
+                            doAsync {
+                                eventLocalDataStore.deleteAll()
+                                eventLocalDataStore.addAll(response.events)
+                            }
                         },
                         { throwable ->
                             Log.i("TAG", "error: ${throwable.message}")

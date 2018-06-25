@@ -4,11 +4,13 @@
     <string name="splash_aruja">Arujá</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="tab_text_1">Eventos</string>
-    <string name="tab_text_2">ECPC</string>
+    <string name="tab_text_2">PIBA Play</string>
+    <string name="tab_text_3">ECPC</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="action_admin">Administrador</string>
     <string name="title_activity_admin">PiB Arujá Administração</string>
     <string name="title_activity_event">Cadastro de eventos</string>
     <string name="YOUTUBE_KEY">AIzaSyBup7pAOXeUSSg4ucjHIHETX_Z8mekRohI</string>
+    <string name="share">Compartilhar</string>
 </resources>

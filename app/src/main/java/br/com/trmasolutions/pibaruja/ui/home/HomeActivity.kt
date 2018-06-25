@@ -30,6 +30,7 @@ class HomeActivity : AppCompatActivity() {
 
         val fragments: ArrayList<Fragment> = ArrayList()
         fragments.add(HomeFragment.newInstance("Eventos"))
+        fragments.add(HomeFragment.newInstance("PIBA Play"))
         fragments.add(HomeFragment.newInstance("ECPC"))
 
         if (savedInstanceState == null) {

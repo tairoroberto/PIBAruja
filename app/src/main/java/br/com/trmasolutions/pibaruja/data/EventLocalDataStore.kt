@@ -12,12 +12,20 @@ class EventLocalDataStore(context: Context) {
         return eventDao.add(event)
     }
 
+    fun addAll(events: List<Event>?) {
+        return eventDao.addAll(events)
+    }
+
     fun update(event: Event) {
         eventDao.update(event)
     }
 
     fun delete(event: Event) {
         eventDao.delete(event)
+    }
+
+    fun deleteAll() {
+        eventDao.deleteAll()
     }
 
     fun getAll(): Flowable<List<Event>> {
