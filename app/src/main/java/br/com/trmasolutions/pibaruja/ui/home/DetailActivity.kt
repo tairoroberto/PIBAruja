@@ -15,12 +15,14 @@ import android.support.v4.view.MenuItemCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.ShareActionProvider
 import android.transition.ChangeBounds
+import android.util.Log
 import android.view.Menu
 import br.com.trmasolutions.pibaruja.BuildConfig
 import br.com.trmasolutions.pibaruja.R
 import br.com.trmasolutions.pibaruja.model.Event
 import br.com.trmasolutions.pibaruja.utils.extension.loadImage
 import br.com.trmasolutions.pibaruja.utils.extension.showProgress
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.content_detail.*
 import java.io.File
@@ -32,6 +34,8 @@ class DetailActivity : AppCompatActivity() {
     private var shareActionProvider: ShareActionProvider? = null
     private var event: Event? = null
     private lateinit var contentUri: Uri
+    private var storage = FirebaseStorage.getInstance()
+    private lateinit var bitmapShare: Bitmap
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -63,6 +67,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun showEvent() {
+        imageViewLogo.isDrawingCacheEnabled = true
         imageViewLogo.loadImage(event?.image, progressImage)
         toolbar_layout.title = event?.name
         textViewName.text = event?.name
@@ -93,13 +98,29 @@ class DetailActivity : AppCompatActivity() {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), WRITE_EXTERNAL_STORAGE)
         }
 
-        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.ic_casal)
+        if (event?.image?.isNotEmpty() == true) {
+            val httpsReference = storage.getReferenceFromUrl(event?.image as String)
 
+            val oneMegabyte = 1024 * 1024
+
+            httpsReference.getBytes(oneMegabyte.toLong()).addOnSuccessListener {
+                bitmapShare = BitmapFactory.decodeByteArray(it, 0, it.size)
+                configShareImage()
+            }.addOnFailureListener {
+                Log.i("TAG", "Error: ${it.message}")
+            }
+        } else {
+            bitmapShare = BitmapFactory.decodeResource(resources, R.drawable.ic_casal)
+            configShareImage()
+        }
+    }
+
+    private fun configShareImage() {
         try {
             val cachePath = File(this.cacheDir, "/images")
             cachePath.mkdirs()
             val stream = FileOutputStream("$cachePath/image.png") // overwrites this image every time
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 80, stream)
+            bitmapShare.compress(Bitmap.CompressFormat.JPEG, 80, stream)
             stream.close()
 
         } catch (e: IOException) {
