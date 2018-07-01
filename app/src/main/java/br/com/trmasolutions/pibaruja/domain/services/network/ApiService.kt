@@ -58,4 +58,7 @@ interface ApiService {
     @DELETE("ecpc/married_couple")
     fun deleteEcpcMarriedCouple(@Body ecpcMarriedCouple: EcpcMarriedCouple): Single<DefaultResponse>
 
+    @GET("youtube/v3/search")
+    fun searchYouTubeVideos(@Query("channelId") channelId: String, @Query("order") order: String, @Query("part") part: String, @Query("pageToken") pageToken: String = "", @Query("key") key: String)
+
 }

@@ -12,5 +12,9 @@
     <string name="title_activity_admin">PiB Arujá Administração</string>
     <string name="title_activity_event">Cadastro de eventos</string>
     <string name="YOUTUBE_KEY">AIzaSyBup7pAOXeUSSg4ucjHIHETX_Z8mekRohI</string>
+    <string name="API_KEY">AIzaSyD20m5jlq8PEUxxm_fR-UgqRRxoUkq18T0</string>
     <string name="share">Compartilhar</string>
+    <string name="channelId">UCjD0Dhs3o7UiUQdZpSBADAA</string>
+    <string name="order">date</string>
+    <string name="part">snippet</string>
 </resources>

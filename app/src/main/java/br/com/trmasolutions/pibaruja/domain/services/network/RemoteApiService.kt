@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit
 
 class RemoteApiService {
     private val URL_BASE = "https://us-central1-pibaruja-39957.cloudfunctions.net/app/"
+    private val URL_BASE_GOOGLE_API = "https://content.googleapis.com/"
     private var retrofit: Retrofit
 
     init {
