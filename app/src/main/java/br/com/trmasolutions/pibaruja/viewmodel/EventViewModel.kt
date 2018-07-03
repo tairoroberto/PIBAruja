@@ -1,4 +1,4 @@
-package br.com.trmasolutions.pibaruja.ui.event
+package br.com.trmasolutions.pibaruja.viewmodel
 
 import android.app.Application
 import android.arch.lifecycle.AndroidViewModel

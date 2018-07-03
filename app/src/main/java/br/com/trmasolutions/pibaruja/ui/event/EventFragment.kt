@@ -24,6 +24,7 @@ import br.com.trmasolutions.pibaruja.R
 import br.com.trmasolutions.pibaruja.model.Event
 import br.com.trmasolutions.pibaruja.utils.extension.showProgress
 import br.com.trmasolutions.pibaruja.utils.extension.validateEmpty
+import br.com.trmasolutions.pibaruja.viewmodel.EventViewModel
 import kotlinx.android.synthetic.main.event_fragment.*
 
 

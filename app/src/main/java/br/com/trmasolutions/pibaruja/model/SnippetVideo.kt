@@ -1,7 +1,10 @@
 package br.com.trmasolutions.pibaruja.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class SnippetVideo(@SerializedName("publishedAt")
                         var publishedAt: String = "",
                         @SerializedName("description")
@@ -15,4 +18,4 @@ data class SnippetVideo(@SerializedName("publishedAt")
                         @SerializedName("channelTitle")
                         var channelTitle: String = "",
                         @SerializedName("liveBroadcastContent")
-                        var liveBroadcastContent: String = "")
+                        var liveBroadcastContent: String = ""): Parcelable

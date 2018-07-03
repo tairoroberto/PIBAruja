@@ -1,7 +1,10 @@
 package br.com.trmasolutions.pibaruja.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class YouTubeVideo(@SerializedName("snippet")
                         val snippet: SnippetVideo,
                         @SerializedName("kind")
@@ -9,4 +12,4 @@ data class YouTubeVideo(@SerializedName("snippet")
                         @SerializedName("etag")
                         val etag: String = "",
                         @SerializedName("id")
-                        val id: IdVideo)
+                        val id: IdVideo): Parcelable

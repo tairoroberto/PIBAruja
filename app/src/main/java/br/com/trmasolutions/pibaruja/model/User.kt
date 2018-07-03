@@ -1,7 +1,10 @@
 package br.com.trmasolutions.pibaruja.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class User(
 
         @SerializedName("uid")
@@ -32,4 +35,4 @@ data class User(
         var city: String = "",
 
         @SerializedName("created_at")
-        var createdAt: String = "")
+        var createdAt: String = ""): Parcelable

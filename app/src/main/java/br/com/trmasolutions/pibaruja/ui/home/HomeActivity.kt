@@ -13,6 +13,7 @@ import android.view.MenuItem
 import android.widget.EditText
 import br.com.trmasolutions.pibaruja.R
 import br.com.trmasolutions.pibaruja.ui.admin.AdminActivity
+import br.com.trmasolutions.pibaruja.ui.pibaplay.PibaPlayFragment
 import kotlinx.android.synthetic.main.activity_home.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -30,8 +31,8 @@ class HomeActivity : AppCompatActivity() {
 
         val fragments: ArrayList<Fragment> = ArrayList()
         fragments.add(HomeFragment.newInstance("Eventos"))
-        fragments.add(HomeFragment.newInstance("PIBA Play"))
-        fragments.add(HomeFragment.newInstance("ECPC"))
+        fragments.add(PibaPlayFragment.newInstance("PIBA Play"))
+        /*fragments.add(HomeFragment.newInstance("ECPC"))*/
 
         if (savedInstanceState == null) {
             mSectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager, fragments)
@@ -51,8 +52,8 @@ class HomeActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
 
-        lateinit var editUser : EditText
-        lateinit var editPassword : EditText
+        lateinit var editUser: EditText
+        lateinit var editPassword: EditText
 
         if (id == R.id.action_admin) {
 
@@ -67,7 +68,7 @@ class HomeActivity : AppCompatActivity() {
             alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "ENTRAR") { dialog, _ ->
                 if (!editUser.text.isEmpty() && !editPassword.text.isEmpty() && editUser.text.toString() == "admin" && editPassword.text.toString() == "123456") {
                     startActivity<AdminActivity>()
-                }else{
+                } else {
                     toast("Dados incorretos")
                 }
                 dialog.dismiss()
