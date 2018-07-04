@@ -24,8 +24,8 @@ class PibaPlayViewModel : ViewModel() {
         return loadingStatus
     }
 
-    fun getYouTubeVideos() {
-        disposables.add(youtubeDataStore.getYouTubeVideos("", "", "", "", "")
+    fun getYouTubeVideos(channelId: String, order: String, part: String, pageToken: String, key: String) {
+        disposables.add(youtubeDataStore.getYouTubeVideos(channelId, order, part, pageToken, key)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe { loadingStatus.setValue(true) }

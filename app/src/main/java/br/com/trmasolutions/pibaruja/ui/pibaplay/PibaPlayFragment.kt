@@ -48,7 +48,7 @@ class PibaPlayFragment : Fragment() {
         adapter = PibaPlayRecyclerAdapter(list, this::click)
         setRecyclerViewListJobs()
 
-        viewModel.getYouTubeVideos()
+        viewModel.getYouTubeVideos(getString(R.string.channelId), getString(R.string.order), getString(R.string.part), "", getString(R.string.API_KEY))
 
         viewModel.getEventResponse().observe(this, Observer {
             adapter.update(it?.items)
@@ -57,6 +57,7 @@ class PibaPlayFragment : Fragment() {
 
         viewModel.getLoadingStatus().observe(this, Observer {
             activity?.showProgress(recyclerView, progressBar, it == true)
+            swipeRefreshLayout?.isRefreshing = false
         })
     }
 
@@ -65,7 +66,7 @@ class PibaPlayFragment : Fragment() {
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
-        swipeRefreshLayout.setOnRefreshListener { viewModel.getYouTubeVideos() }
+        swipeRefreshLayout.setOnRefreshListener { viewModel.getYouTubeVideos(getString(R.string.channelId), getString(R.string.order), getString(R.string.part), "", getString(R.string.API_KEY)) }
     }
 
     private fun click(youTubeVideo: YouTubeVideo, imageView: ImageView) {

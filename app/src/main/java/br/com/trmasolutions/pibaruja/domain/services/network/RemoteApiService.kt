@@ -1,5 +1,6 @@
 package br.com.trmasolutions.pibaruja.domain.services.network
 
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -11,9 +12,11 @@ class RemoteApiService {
     private val URL_BASE = "https://us-central1-pibaruja-39957.cloudfunctions.net/app/"
     private val URL_BASE_GOOGLE_API = "https://content.googleapis.com/"
     private var retrofit: Retrofit
+    private var retrofitYoutube: Retrofit
 
     init {
         val httpClient = OkHttpClient.Builder()
+                .addNetworkInterceptor(StethoInterceptor())
                 .readTimeout(20, TimeUnit.SECONDS)
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(20, TimeUnit.SECONDS)
@@ -25,9 +28,17 @@ class RemoteApiService {
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient)
                 .build()
+
+        retrofitYoutube = Retrofit.Builder()
+                .baseUrl(URL_BASE_GOOGLE_API)
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient)
+                .build()
     }
 
     fun getApiService(): ApiService = retrofit.create(ApiService::class.java)
+    fun getApiServiceYouTube(): ApiService = retrofitYoutube.create(ApiService::class.java)
 
     private fun getRewriteCacheControlInterceptor(isNetworkAvailable: Boolean): Interceptor {
         return Interceptor { chain ->

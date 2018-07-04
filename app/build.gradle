@@ -118,7 +118,8 @@ dependencies {
     /*############################ Retrofit ######################################*/
     implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.retrofit}"
     implementation "com.squareup.retrofit2:retrofit:${rootProject.retrofit}"
-
+    implementation "com.facebook.stetho:stetho:${rootProject.stetho}"
+    implementation "com.facebook.stetho:stetho-okhttp3:${rootProject.stetho}"
     /*############################################################################*/
 
     /*############################ Gson: Json Converter ##########################*/

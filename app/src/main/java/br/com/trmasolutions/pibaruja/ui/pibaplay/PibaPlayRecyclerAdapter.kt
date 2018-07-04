@@ -50,11 +50,11 @@ class PibaPlayRecyclerAdapter(private var list: MutableList<YouTubeVideo>,
         private val progressImage: ProgressBar = view.findViewById(R.id.progressImage)
 
         fun bind(youTubeVideo: YouTubeVideo) {
-            if (!youTubeVideo.snippet.thumbnails.default.url.isEmpty()) {
+            if (!youTubeVideo.snippet.thumbnails.high.url.isEmpty()) {
                 imageView.loadImage(youTubeVideo.snippet.thumbnails.default.url, progressImage)
             }
 
-            textViewTitle.text = youTubeVideo.snippet.channelTitle
+            textViewTitle.text = youTubeVideo.snippet.title
             textViewDescription.text = youTubeVideo.snippet.description
         }
     }

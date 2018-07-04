@@ -30,6 +30,7 @@ buildscript {
     ext.okhttp_urlconnection = '3.2.0'
     ext.logging_interceptor = '3.4.1'
     ext.okhttp = '3.7.0'
+    ext.stetho = '1.5.0'
 
     ext.rxandroid = '2.0.1'
     ext.rxjava = '2.1.0'
